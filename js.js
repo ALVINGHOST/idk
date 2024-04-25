@@ -17,6 +17,10 @@ window.addEventListener("load",()=>{
            
         });
     }
+    document.querySelector("#help").addEventListener("click",()=>{
+        let helpdiv = document.querySelector("#helpdiv");
+        helpdiv.classList.toggle("d-none");
+    });
  queSystem();
 })
 
@@ -29,18 +33,27 @@ function queSystem() {
         let name = document.querySelector("#namn").value;
         let quantity = document.querySelector("#antal").value;
 
+
+        if(outputbox.classList.contains("d-none")){
+            outputbox.classList.remove("d-none");
+        };
         let p = document.createElement("p");
         outputbox.appendChild(p);
         p.textContent = name + " " + quantity;
+
+        document.querySelector("#namn").value = "";
+        document.querySelector("#antal").value = "";
 
         p.addEventListener("contextmenu",function giveTable(event){
             event.preventDefault();
             if(confirm("Vill du ge "+name+" ett bord?")){
                 console.log("sätta på boprd");
                 this.remove();
-                if (outputbox.lastChild.tagName == "H1"){
-                    console.log("bort");   
+                if (outputbox.lastChild.tagName == undefined){
+                    outputbox.classList.add("d-none"); 
                 }
+
+                // console.log(outputbox.lastChild.tagName);
 
             }
         })

@@ -8,19 +8,17 @@
 </head>
 <body>
     <div class="main-container">
-        <!-- <img src="images/floorplanwhite.png" alt="bakgrund" 
-        style="background-image:var(); width: 45%; height: 100%;"> -->
-        <div id="info" class="border border-black m-2">
-            info
+        <div id="info" class="m-2">
+            Glada Galtens Bordsbokningsprogram
         </div>
         <div class="booking-container">
         <div id="bordvänster" class="col-4">
-            <div id="B1"class="border border-black free round-table">1</div>
-            <div id="B2"class="border border-black free round-table">2</div>
-            <div id="B3"class="border border-black free round-table">3</div>
-            <div id="B4"class="border border-black free round-table">4</div>
-            <div id="B5"class="border border-black free round-table">5</div>
-            <div id="B6"class="border border-black free round-table">6</div>
+            <div id="B1"class="border border-black free round-table"><p class="tablenum">1</p><p class="tableseats">4</p></div>
+            <div id="B2"class="border border-black free round-table"><p class="tablenum">2</p><p class="tableseats">4</p></div>
+            <div id="B3"class="border border-black free round-table"><p class="tablenum">3</p><p class="tableseats">4</p></div>
+            <div id="B4"class="border border-black free round-table"><p class="tablenum">4</p><p class="tableseats">4</p></div>
+            <div id="B5"class="border border-black free round-table"><p class="tablenum">5</p><p class="tableseats">4</p></div>
+            <div id="B6"class="border border-black free round-table"><p class="tablenum">6</p><p class="tableseats">4</p></div>
         </div>
         <div class="R-divs col-8">
         <div id="kösystem" class="col-6" >
@@ -31,26 +29,37 @@
                 <input type="number" id="antal" required><br>            
                 <button type="button" id="ställ_i_kö" class="btn btn-primary" value="submit">ställ i kö</button>
             </form>
-            <div id="outputbox" class="">
+            <div id="outputbox" class="d-none">
                 <h1>Sällskap i kö:</h1>
-            </div>       
+            </div>
+            <div id="helpdiv" class="d-none">
+                <h2>Glada Galtens Bordsbokningsmanual.</h2>
+                <p>Programmet visualiserar restaurangens planlösning.</p>
+                <p>Blå bord är ledig bord och gula bord är upptagna bord.</p>
+                <p>På alla bord finner du överst bordsnummer och under det finner du antal sittplatser.</p>
+                <p>Klicka på bord med pekfingret för att skifta mellan upptaget och ledigt.</p>
+                <p>Är alla bord upptagna och ett sällskap vill vänta på ett bord. Skriv ett namn och antal för sällskapet och klicka på ”ställ i kö” med pekfingret. </p>
+                <p>När sällskapet ska få ett bord så håller du pekfingret på deras namn i en sekund och därefter behöver du bekräfta att de ska få ett bord genom att klicka på ”bekräfta” med pekfingret för att ta bort deras namn från kölistan. Därefter skiftar du status på det lediga, dvs blå, bord du vill placera dem vid.</p>
+                <p>Tryck på frågetecknet igen för att stänga denna ruta.</p>
+            </div>
+            <img src="images/question-bubble-big.png" id="help" alt="infoknapp">
         </div>
         <div id="bordhöger" class="col-6">
-            <div id="B15" class="square-table free">15</div>
-            <div id="B16" class="square-table free">16</div>
+            <div id="B15" class="square-table free"><p class="tablenum">15</p><p class="tableseats">2</p></div>
+            <div id="B16" class="square-table free"><p class="tablenum">16</p><p class="tableseats">2</p></div>
         </div>
         <div id="bordbotten" class="col-12">
             <div class="bottencontainer">
-                <div id="B7" class="rectangle-table free">7</div>
-                <div id="B8" class="rectangle-table free">8</div>
-                <div id="B9" class="rectangle-table free">9</div>
-                <div id="B10"class="rectangle-table free">10</div>
+                <div id="B7" class="rectangle-table free"><p class="tablenum">7</p><p class="tableseats">4</p></div>
+                <div id="B8" class="rectangle-table free"><p class="tablenum">8</p><p class="tableseats">4</p></div>
+                <div id="B9" class="rectangle-table free"><p class="tablenum">9</p><p class="tableseats">4</p></div>
+                <div id="B10"class="rectangle-table free"><p class="tablenum">10</p><p class="tableseats">4</p></div>
             </div>
             <div class="bottencontainer">            
-            <div id="B11"class="square-table free ">11</div>
-            <div id="B12"class="square-table free ">12</div>
-            <div id="B13"class="round-table-big free  border border-black">13</div>
-            <div id="B14"class="square-table free ">14</div>
+            <div id="B11"class="square-table free "><p class="tablenum">11</p><p class="tableseats">2</p></div>
+            <div id="B12"class="square-table free "><p class="tablenum">12</p><p class="tableseats">2</p></div>
+            <div id="B13"class="round-table-big free  border border-black"><p class="tablenum">13</p><p class="tableseats">6</p></div>
+            <div id="B14"class="square-table free "><p class="tablenum">14</p><p class="tableseats">2</p></div>
         </div>
 
         </div>
